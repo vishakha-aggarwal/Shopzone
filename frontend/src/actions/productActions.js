@@ -45,7 +45,7 @@ export const getProduct = (keyword = "", currentPage = 1, price = [0, 25000], ca
    
   try {
       dispatch({ type: ALL_PRODUCT_REQUEST });
-      let api = "https://shopzone-mern.herokuapp.com";
+      let api = "http://localhost:5000";
       let link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&ratings[gte]=${ratings}`;
       
       if(category)
@@ -70,7 +70,7 @@ export const getProduct = (keyword = "", currentPage = 1, price = [0, 25000], ca
 export const getProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST });
-    let api = "https://shopzone-mern.herokuapp.com";
+    let api = "http://localhost:5000";
     let link = "/api/v1/product/";
     const { data } = await axios.get(api+link+id);
 
@@ -97,7 +97,7 @@ export const newReview = (reviewData) => async (dispatch) => {
   try {
     dispatch({ type: NEW_REVIEW_REQUEST });
     const config = { method: "PUT", headers: { "Content-Type": "application/json"}, withCredentials: 'true', credentials: 'include'};
-    const api = "https://shopzone-mern.herokuapp.com";
+    const api = "http://localhost:5000";
     const { data } = await axios.put(api + "/api/v1/review", reviewData, config);
     dispatch({
       type: NEW_REVIEW_SUCCESS,
@@ -116,7 +116,7 @@ export const getAdminProduct = () => async (dispatch) => {
   try {
     dispatch({ type: ADMIN_PRODUCT_REQUEST });
     const config = { method: "GET", headers: { "Content-Type": "application/json"}, withCredentials: 'true', credentials: 'include'};
-    const api = "https://shopzone-mern.herokuapp.com";
+    const api = "http://localhost:5000";
     const { data } = await axios.get(api + "/api/v1/admin/products", config);
 
     dispatch({
@@ -137,7 +137,7 @@ export const createProduct = (productData) => async (dispatch) => {
   try {
     dispatch({ type: NEW_PRODUCT_REQUEST });
     const config = { method: "POST", headers: { "Content-Type": "application/json"}, withCredentials: 'true', credentials: 'include'};
-    const api = "https://shopzone-mern.herokuapp.com";
+    const api = "http://localhost:5000";
     const { data } = await axios.post(api + "/api/v1/admin/product/new", productData, config);
     dispatch({
       type: NEW_PRODUCT_SUCCESS,
@@ -157,7 +157,7 @@ export const deleteProduct = (id) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_PRODUCT_REQUEST });
     const config = { method: "DELETE", headers: { "Content-Type": "application/json"}, withCredentials: 'true', credentials: 'include'};
-    const api = "https://shopzone-mern.herokuapp.com";
+    const api = "http://localhost:5000";
     const { data } = await axios.delete(api + `/api/v1/admin/product/${id}`, config);
     dispatch({
       type: DELETE_PRODUCT_SUCCESS,
@@ -177,7 +177,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
   try {
     dispatch({ type: UPDATE_PRODUCT_REQUEST });
     const config = { method: "PUT", headers: { "Content-Type": "application/json"}, withCredentials: 'true', credentials: 'include'};
-    const api = "https://shopzone-mern.herokuapp.com";
+    const api = "http://localhost:5000";
     const { data } = await axios.put(api + `/api/v1/admin/product/${id}`,productData,config);
 
     dispatch({
@@ -197,7 +197,7 @@ export const getAllReviews = (id) => async (dispatch) => {
   try {
     dispatch({ type: ALL_REVIEW_REQUEST });
     const config = { method: "GET", headers: { "Content-Type": "application/json"}, withCredentials: 'true', credentials: 'include'};
-    const api = "https://shopzone-mern.herokuapp.com";
+    const api = "http://localhost:5000";
     const { data } = await axios.get(api + `/api/v1/reviews?id=${id}`, config);
 
     dispatch({
@@ -217,7 +217,7 @@ export const deleteReviews = (reviewId, productId) => async (dispatch) => {
   try {
     dispatch({ type: DELETE_REVIEW_REQUEST });
     const config = { method: "DELETE", headers: { "Content-Type": "application/json"}, withCredentials: 'true', credentials: 'include'};
-    const api = "https://shopzone-mern.herokuapp.com";
+    const api = "http://localhost:5000";
     const { data } = await axios.delete(api + `/api/v1/reviews?id=${reviewId}&productId=${productId}`, config);
 
     dispatch({

@@ -28,7 +28,7 @@ export const createOrder = (order) => async (dispatch) => {
     try {
         dispatch({ type: CREATE_ORDER_REQUEST });
         const config = { method: "POST", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
-        const api = "https://shopzone-mern.herokuapp.com";
+        const api = "http://localhost:5000";
         const { data } = await axios.post(api + "/api/v1/order/new", order, config);
         dispatch({ 
             type: CREATE_ORDER_SUCCESS, 
@@ -52,7 +52,7 @@ export const myOrders = () => async (dispatch) => {
     
     try {
         dispatch({ type: MY_ORDERS_REQUEST });
-        const api = "https://shopzone-mern.herokuapp.com";
+        const api = "http://localhost:5000";
         const config = { method: "GET", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
         const { data } = await axios.get(api + "/api/v1/order/me", config);
         dispatch({ 
@@ -71,7 +71,7 @@ export const myOrders = () => async (dispatch) => {
 export const getOrderDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: ORDER_DETAILS_REQUEST });
-        const api = "https://shopzone-mern.herokuapp.com";
+        const api = "http://localhost:5000";
         const config = { method: "GET", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
         const { data } = await axios.get(api + `/api/v1/order/${id}`, config);
         dispatch({ 
@@ -91,7 +91,7 @@ export const getAllOrders = () => async (dispatch) => {
     
     try {
         dispatch({ type: ALL_ORDERS_REQUEST });
-        const api = "https://shopzone-mern.herokuapp.com";
+        const api = "http://localhost:5000";
         const config = { method: "GET", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
         const { data } = await axios.get(api + "/api/v1/admin/orders", config);
         dispatch({ type: ALL_ORDERS_SUCCESS, payload: data.orders });
@@ -107,7 +107,7 @@ export const getAllOrders = () => async (dispatch) => {
 export const updateOrder = (id, order) => async (dispatch) => {
     try {
         dispatch({ type: UPDATE_ORDER_REQUEST });
-        const api = "https://shopzone-mern.herokuapp.com";
+        const api = "http://localhost:5000";
         const config = { method: "PUT", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
         const { data } = await axios.put(api + `/api/v1/admin/order/${id}`,
             order,
@@ -127,7 +127,7 @@ export const deleteOrder = (id) => async (dispatch) => {
     
     try {
         dispatch({ type: DELETE_ORDER_REQUEST });
-        const api = "https://shopzone-mern.herokuapp.com";
+        const api = "http://localhost:5000";
         const config = { method: "DELETE", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
         const { data } = await axios.delete(api + `/api/v1/admin/order/${id}`, config);
         dispatch({ type: DELETE_ORDER_SUCCESS, payload: data.success });
