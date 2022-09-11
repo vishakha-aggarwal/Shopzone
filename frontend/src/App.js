@@ -70,8 +70,7 @@ function App() {
       }
     })
     store.dispatch(loadUser());
-    if(isAuthenticated === true)
-      getStripeApiKey();
+    getStripeApiKey();
   }, [])
 
   function RequireAuth({isAdmin, children, redirectTo }) {
