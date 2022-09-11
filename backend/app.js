@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(fileUpload());
 
 
-if(process.env.NODE_ENV!=="PRODUCTION")
+if(process.env.NODE_ENV!=="production")
     require("dotenv").config({path:"backend/config/config.env"});
 
 
