@@ -8,7 +8,7 @@ import axios from "axios";
 // Add to Cart
 export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {
     
-    const api = "http://localhost:5000";
+    const api = "https://shopzone-mern.herokuapp.com";
     const config = { method: "GET", headers: { "Content-Type": "multipart/form-data" }, withCredentials: 'true', credentials: 'include' };
     const { data } = await axios.get(api + `/api/v1/product/${id}`, config);
 
