@@ -8,8 +8,9 @@ const app = express();
 // const dotenv = require("dotenv");
 
 const corsOptions = {
-    origin: true, //included origin as true
-    credentials: true, //included credentials as true
+    origin: "https://shopzone-mern.netlify.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
 };
 const errormiddleware = require("./middleware/error");
 app.use(cors(corsOptions));

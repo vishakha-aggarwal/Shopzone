@@ -70,7 +70,7 @@ function App() {
       }
     })
     store.dispatch(loadUser());
-    // if(isAuthenticated === true)
+    if(isAuthenticated === true)
       getStripeApiKey();
   }, [])
 
