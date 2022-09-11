@@ -5,7 +5,14 @@
   "main": "backend/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node backend/server.js"
+    "start": "nodemon --watch backend --exec node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm start --prefix frontend",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --force --prefix frontend && npm run build --prefix frontend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishakha-aggarwal/Shopzone.git"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +28,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.5",
     "nodemailer": "^6.6.3",
+    "nodemon": "^2.0.19",
     "react-js-pagination": "^3.0.3",
     "stripe": "^8.222.0",
     "validator": "^13.6.0"
