@@ -1,0 +1,130 @@
+.orderDetailsContainer>h1 {
+    font: 300 20px "Roboto";
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    font-family: cursive;
+}
+
+.orderDetailsContainer {
+    padding: 20px;
+    margin: 10px;
+    padding-bottom: 0%;
+}
+
+.orderDetailsContainer>p {
+    font: 400 16px "Roboto";
+    margin-top: 20px;
+}
+
+.orderDetailsContainerBox,
+.orderDetailsCartItemsContainer {
+    margin: 10px;
+}
+
+.orderDetailsContainerBox>div {
+    display: flex;
+    margin: 1vmax 0;
+    height: 30px;
+}
+
+.orderDetailsContainerBox>div>p {
+    font: 800 14px "Roboto";
+    color: rgb(0, 0, 0);
+    margin-top: 15px;
+
+}
+
+.orderDetailsContainerBox>div>span {
+    margin: 2vmax 1vmax;
+    margin-top: 15px;
+    font: 100 14px "Roboto";
+    color: #575757;
+}
+
+.orderDetailsCartItems>p {
+    font: 400 16px "Roboto";
+}
+
+.orderDetailsCartItems {
+    padding: 2vmax 5vmax;
+    border-top: 1px solid rgba(0, 0, 0, 0.164);
+    padding-left: 4vmax;
+}
+
+.orderDetailsCartItemsContainer>div {
+    display: flex;
+    font: 400 14px "Roboto";
+    align-items: center;
+    margin: 2vmax 0;
+}
+
+.orderDetailsCartItemsContainer>div>img {
+    width: 3vmax;
+}
+
+.orderDetailsCartItemsContainer>div>a {
+    color: #575757;
+    margin: 0 2vmax;
+    width: 60%;
+    text-decoration: none;
+}
+
+.orderDetailsCartItemsContainer>div>span {
+    font: 100 14px "Roboto";
+    color: #5e5e5e;
+}
+
+@media screen and (max-width: 600px) {
+    .orderDetailsContainer>p {
+        font: 400 16px "Roboto";
+    }
+
+    .orderDetailsContainer > h1{
+        font-size: 2.5vmax;
+        word-wrap: break-word;
+    }
+    
+    .orderDetailsContainer{
+        padding-left: 5vw;
+    }
+    .orderDetailsContainerBox>div {
+        margin: 10px 0;
+    }
+
+    .orderDetailsContainerBox>div>p {
+        font: 800 12px "Roboto";
+    }
+
+    .orderDetailsContainerBox>div>span {
+        font: 100 12px "Roboto";
+        word-wrap: break-word;
+
+    }
+
+    .orderDetailsCartItems{
+        padding-left: 5vw;
+        padding-right: 0px;
+    }
+
+    .orderDetailsCartItems>p {
+        font: 400 16px "Roboto";
+    }
+
+    .orderDetailsCartItemsContainer>div {
+        font: 400 12px "Roboto";
+        margin: 4vw 0;
+    }
+
+    .orderDetailsCartItemsContainer>div>img {
+        width: 10vw;
+    }
+
+    .orderDetailsCartItemsContainer>div>a {
+        margin: 2vw;
+        width: 30%;
+    }
+
+    .orderDetailsCartItemsContainer>div>span {
+        font: 100 12px "Roboto";
+    }
+}

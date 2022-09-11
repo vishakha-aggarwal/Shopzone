@@ -1,0 +1,78 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 0;
+    height: 100vh;
+}
+
+.sidebar>a:first-child {
+    padding: 0;
+}
+
+.sidebar>a>img {
+    width: 100%;
+    transition: all 0.5s;
+    /* margin-left:15%; */
+}
+
+.sidebar>a>img:hover {
+    filter: drop-shadow(0 0 10px rgb(6, 2, 116));
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.493);
+    font: 200 14px "Roboto";
+    padding: 10px;
+    margin-left: 10%;
+    transition: all 0.5s;
+}
+
+.sidebar a:hover {
+    color: rgb(58, 124, 174);
+    transform: scale(1.1);
+}
+
+.sidebar a>P {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar a>p>svg {
+    margin-right: 0.5rem;
+}
+
+.MuiTypography-root {
+    background-color: #fff !important;
+}
+
+.MuiTreeItem-label {
+    margin-left: 10%;
+    color: gray;
+}
+
+@media screen and (max-width: 600px) {
+
+    .sidebar {
+        height: auto;
+        padding: 10px;
+    }
+
+    .sidebar>a>img {
+        margin-left:20vw;
+        width: 50vw;
+    }
+  
+    .sidebar a {
+        font: 200 14px "Roboto";
+        margin-left: 5vw;
+    }
+    
+    .MuiTreeItem-label {
+        margin-left: 5vw;
+        color: gray;
+        font-size: 14px;
+    }
+    
+
+}

@@ -1,0 +1,45 @@
+.slide-container{
+    margin-top: 20px;
+    align-items: center;
+    height: 60vh;
+}
+
+.sliderImg{
+    height: 60vh;
+    width: 70vw;
+    margin-left: 15vw;
+    align-items: center;
+    border-radius: 30px;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .slide-container{
+        margin-top: 20px;
+        margin-left: 0px;
+        align-items: center;
+        height: 40vh;
+    }
+    
+    .sliderImg{
+        height: 40vh;
+        width: 80vw;
+        margin-left: 10vw;
+        border-radius: 20px;
+    }
+    
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .slide-container{
+        height: 30vh;
+    }
+    
+    .sliderImg{
+        height: 30vh;
+    }
+    
+}

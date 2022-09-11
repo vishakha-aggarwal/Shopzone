@@ -1,0 +1,105 @@
+.dashboard {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.dashboardContainer {
+    border-left: 1px solid rgba(0, 0, 0, 0.13);
+    padding: 3rem 0;
+}
+
+.dashboardContainer>h1 {
+    color: rgba(0, 0, 0, 0.733);
+    font: 300 18px "Roboto";
+    text-align: center;
+    width: 50%;
+    padding: 15px;
+    margin: auto;
+    border: 0.5px solid rgb(185, 184, 184);
+}
+
+.dashboardSummary {
+    margin: 2rem 0;
+}
+
+.dashboardSummary>div {
+    display: flex;
+    justify-content: center;
+}
+
+.dashboardSummary>div>p {
+    background-color: rgba(70, 117, 218, 0.932);
+    color: white;
+    font: 300 1.3rem "Roboto";
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    margin: 0 2rem;
+}
+
+.dashboardSummaryBox2>a {
+    color: rgb(0, 0, 0);
+    font: 300 16px "Roboto";
+    text-align: center;
+    background-color: rgb(255, 233, 174);
+    text-decoration: none;
+    padding: 20px;
+    width: 10vmax;
+    height: 10vmax;
+    margin: 2rem;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dashboardSummaryBox2>a:first-child {
+    background-color: rgb(255, 110, 110);
+    color: rgb(255, 255, 255);
+}
+
+.dashboardSummaryBox2>a:last-child {
+    background-color: rgb(2, 46, 140);
+    color: rgb(255, 255, 255);
+}
+
+.lineChart {
+    width: 80%;
+    margin: auto;
+}
+
+.doughnutChart {
+    width: 30vmax;
+    margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboardContainer {
+        border-left: none;
+    }
+
+    .dashboardSummary>div {
+        display: block;
+        justify-content: center;
+    }
+
+    .dashboardSummary>div>p {
+        margin: 10px;
+        width: 80vw;
+    }
+
+    .dashboardSummaryBox2>a {
+        padding: 0.5rem;
+        margin: 1rem;
+        font: 300 0.9rem "Roboto";
+        margin-left: 30vw;
+        width: 35vw;
+        height: 35vw;
+    }
+}

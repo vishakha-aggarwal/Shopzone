@@ -1,0 +1,149 @@
+.homeHeading {
+    text-align: center;
+    font-family: Roboto;
+    font-size: 2vmax;
+    border-bottom: 1px solid rgba(21, 21, 21, 0.5);
+    width: 20vmax;
+    padding: 1vmax;
+    margin: 5vmax auto;
+    color: rgb(0, 0, 0, 0.7);
+}
+
+
+.container {
+    display: flex;
+    margin: 2vmax auto;
+    width: 80vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+}
+  
+.productCard {
+    width: 14vmax;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(48, 48, 48);
+    margin: 2vmax;
+    transition: all 0.5s;
+    padding-bottom: 0.5vmax;
+}
+  
+.productImg{
+    width: 14vmax;
+    height: 40vh;
+    border-radius: 10px;
+}
+
+.rating{
+    margin: 0.5vmax;
+    font-family: "Roboto";
+    /* display: flex; */
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.productCard > p {
+    font-family: "Roboto";
+    font-size: 1.2vmax;
+    margin: 1vmax 0.5vmax;
+    margin-bottom: 0;
+}
+  
+.productCard > span {
+    margin: 0.5vmax;
+    color: rgb(0, 79, 83);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 1.5vmax;
+}
+
+.productCard:hover {
+    box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);  
+    transform: translateY(-1vmax);
+}
+
+
+@media screen and (max-width: 850px) and (min-width: 600px) {
+    
+    .homeHeading {
+        font-size: 3vmax;
+        margin: 5vmax auto;
+        width: 50vw;
+    }
+    
+    .productCard {
+        width: 22vmax;
+    }
+
+    .productCard > p{
+        font-size: 16px;
+    }
+
+    .productImg{
+        width: 20vmax;
+        height: 35vh;
+    }
+
+    .rating{
+        margin: 0.3vmax;
+        font-size: smaller;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    .homeHeading {
+        font-size: 3vmax;
+        margin: 5vmax auto;
+        width: 50vw;
+    }
+    
+    .productCard {
+        width: 18vmax;
+    }
+
+    .productCard > p{
+        font-size: 12px;
+    }
+
+    .productImg{
+        width: 18vmax;
+        height: 25vh;
+    }
+
+    .rating{
+        margin: 0.3vmax;
+        font-size: smaller;
+    }
+}
+
+
+@media screen and (max-width: 400px)  {
+    
+    .homeHeading {
+        font-size: 3vmax;
+        margin: 5vmax auto;
+        width: 50vw;
+    }
+        
+    .container {
+        display: block;
+        margin-left: 10vw;
+    }
+  
+    .productCard {
+        justify-content: center;
+        width: 75vw;
+    }
+
+    .productCard > p{
+        font-size: 12px;
+    }
+
+    .productImg{
+        width: 50%;
+        height: 22vh;
+        margin-left: 20%;
+    }
+}

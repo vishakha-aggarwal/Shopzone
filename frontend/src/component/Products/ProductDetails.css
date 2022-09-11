@@ -1,0 +1,336 @@
+.ProductDetails {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  max-width: 100%;
+  padding: 6vmax;
+  padding-top: 3vh;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.ProductDetails>div {
+
+  width: 40vw;
+  /* display: flex; */
+  /* flex-direction: column; */
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2vmax;
+  /* box-sizing: border-box; */
+  border: 1px solid white;
+}
+
+.SlideImage {
+  margin-left: 5vw;
+  width: 25vw;
+  height: 50vh;
+}
+
+.prodHeading {
+  color: rgb(54, 54, 54);
+  font-size: 20px;
+  font-family: "Roboto";
+}
+
+.prodHeading>h4 {
+  color: rgba(54, 54, 54, 0.582);
+  font-size: 16px;
+  font-family: cursive;
+  margin-top: -15px;
+}
+
+.ratings {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.205);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+  width: 80%;
+  padding: 1vmax 0;
+}
+
+.reviewsCount {
+  font: 16px cursive;
+  color: rgba(0, 0, 0, 0.699);
+}
+
+.incDec {
+  width: 80%;
+  font-family: Roboto;
+}
+
+
+.addToCart {
+  display: flex;
+  align-items: center;
+}
+
+.add>button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.616);
+  padding: 0.5vmax;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+}
+
+.add>button:hover {
+  background-color: rgba(0, 0, 0, 0.767);
+}
+
+.add>input {
+  border: none;
+  padding: 0.5vmax;
+  width: 40px;
+  text-align: center;
+  outline: none;
+  font: 400 12px "Roboto";
+  color: rgba(0, 0, 0, 0.74);
+}
+
+.addToCart>button {
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s;
+  background-color: rgb(0, 110, 104);
+  font: 500 11px "Roboto";
+  border-radius: 20px;
+  padding: 0.5vmax 2vmax;
+  margin: 1vmax;
+  outline: none;
+}
+
+.addToCart>button:hover {
+  background-color: rgb(244, 244, 60);
+  color: black;
+}
+
+.incDec>p {
+  border-top: 1px solid rgba(0, 0, 0, 0.205);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+  padding: 1vmax 0;
+  color: rgba(0, 0, 0, 0.651);
+  font: 400 14px "Roboto";
+  margin: 1vmax 0;
+}
+
+.description {
+  color: rgba(0, 0, 0, 0.897);
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: bold;
+}
+
+.description > p{
+  font-weight: lighter;
+}
+
+
+.submitReview {
+  border: none;
+  background-color: rgb(0, 124, 114);
+  font: 500 12px "Roboto";
+  border-radius: 20px;
+  padding: 0.6vmax 2vmax;
+  margin: 1vmax 0;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s;
+  outline: none;
+}
+
+.submitReview:hover {
+  background-color: rgb(14, 158, 136);
+  transform: scale(1.1);
+}
+
+.reviewsHeading {
+  color: #000000be;
+  font: 800 20px "Roboto";
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+  padding: 1vmax;
+  width: 20vmax;
+  margin: auto;
+  margin-bottom: 4vmax;
+}
+.reviews {
+  display: flex;
+  overflow: auto;
+}
+
+.reviewCard {
+  flex: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
+  border: 1px solid rgba(56, 56, 56, 0.116);
+  width: 30vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vmax;
+  padding: 3vmax;
+}
+.reviewCard > img {
+  width: 5vmax;
+}
+.reviewCard > p {
+  color: rgba(0, 0, 0, 0.836);
+  font: 600 14px "Roboto";
+}
+.reviewCardComment {
+  color: rgba(0, 0, 0, 0.445);
+  font: 800 12px cursive;
+}
+
+.noReviews {
+  font: 800 20px "Roboto";
+  text-align: center;
+  color: rgba(0, 0, 0, 0.548);
+}
+
+
+@media screen and (max-width: 650px) {
+  .ProductDetails {
+    flex-direction: column;
+    height: unset;
+  }
+
+
+  .ProductDetails>div {
+    width: 80vw;
+    /* display: flex; */
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    padding: 2vmax;
+    /* box-sizing: border-box; */
+    border: 1px solid white;
+  }
+
+  .ProductDetails>div:last-child {
+    align-items: center;
+    text-align: center;
+  }
+
+  .prodHeading > h2 {
+    font-size: 2.8vmax;
+    text-align: center;
+  }
+
+  .ratings {
+    justify-content: center;
+  }
+
+  .ratings>span {
+    font-size: 12px;
+  }
+
+  .incDec>h1 {
+    font: 700 3vmax "Franklin Gothic Medium";
+    text-align: center;
+  }
+
+  .addToCart{
+    flex-direction: column;
+  }
+
+  .add {
+    padding: 2vmax 0;
+  }
+
+  .add>button {
+    padding: 1.2vmax;
+    width: 4vmax;
+  }
+
+  .add>input {
+    padding: 1.5vmax;
+    width: 3vmax;
+    font: 400 1.8vmax "Roboto";
+  }
+
+  .addToCart>button:last-child {
+    font: 500 1.7vmax "Roboto";
+    padding: 1.5vmax;
+    width: 20vmax;
+    margin: 3vmax 0;
+  }
+
+  .incDec>p {
+    padding: 2.5vmax 0;
+    text-align: center;
+    font: 400 2vmax "Roboto";
+  }
+
+  .description {
+    margin-left: -20vw;
+    font: 900 2.5vmax "Roboto";
+  }
+
+  .description>p {
+    font: 400 1.8vmax "Roboto";
+  }
+
+  .submitReview {
+    font: 500 1.7vmax "Roboto";
+    padding: 1.5vmax;
+    width: 20vmax;
+    margin: 3vmax 0;
+    margin-left: -20vw;
+  }
+
+  
+  .reviews {
+    overflow-x: auto;
+  }
+
+    
+  .reviews::-webkit-scrollbar {
+    height: 5px;
+    background-color: #f8fff9;
+  }
+
+  .reviews::-webkit-scrollbar-thumb {
+    height: 5px;
+    background-color: #aeccfff1;
+    border-radius: 1rem;
+  }
+  .reviewCard > p {
+    font: 600 16px "Roboto";
+  }
+  .reviewCardComment {
+    font: 500 12px cursive;
+  }
+} 
+
+@media screen and (max-width: 400px) {
+
+  .SlideImage{
+    width: 60vw;
+    height: 50vh;
+  }
+  .slider{
+    margin-left: -10vw;
+  }
+
+  .ProductDetails{
+
+    word-wrap: break-word;
+    width: 100vw;
+    /* padding-right: 15vw; */
+  }
+
+  .reviews {
+    display: block;
+    text-align: center;
+    justify-content: center;
+  }
+
+  
+  .reviewCard{
+    width: 80%;
+  }
+
+}
