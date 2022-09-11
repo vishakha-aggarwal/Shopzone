@@ -45,7 +45,7 @@ export const login = (email, password) => async (dispatch) => {
         dispatch({ type: LOGIN_REQUEST });
         const config = { method: "POST", headers: { "Content-Type": "application/json"}, withCredentials: 'true', credentials: 'include'};
 
-        const api = "http://localhost:5000";
+        const api = "https://shopzone-mern.herokuapp.com";
         const { data } = await axios.post(
             api + "/api/v1/login",
             { email, password },
@@ -70,7 +70,7 @@ export const register = (userData) => async (dispatch) => {
     try {
         dispatch({ type: REGISTER_USER_REQUEST });
         const config = { method: "POST", headers: { "Content-Type": "multipart/form-data"}, withCredentials: 'true', credentials: 'include'};
-        const api = "http://localhost:5000";
+        const api = "https://shopzone-mern.herokuapp.com";
         const { data } = await axios.post(
             api + "/api/v1/register", 
             userData, 
@@ -93,7 +93,7 @@ export const loadUser = () => async (dispatch) => {
     try {
         dispatch({ type: LOAD_USER_REQUEST });
         const config = { method: "GET", headers: { "Content-Type": "application/json"}, withCredentials: 'true', credentials: 'include'};
-        const api = "http://localhost:5000";
+        const api = "https://shopzone-mern.herokuapp.com";
         const { data } = await axios.get(api + "/api/v1/me", config);
     
         dispatch({ 
@@ -117,7 +117,7 @@ export const clearErrors = () => async (dispatch) => {
 export const logout = () => async (dispatch) => {
 
     try {
-        const api = "http://localhost:5000";
+        const api = "https://shopzone-mern.herokuapp.com";
         const config = { method: "GET", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
         await axios.get(api + "/api/v1/logout",config);
         dispatch({ type: LOGOUT_SUCCESS });
@@ -134,7 +134,7 @@ export const updateProfile = (userData) => async (dispatch) => {
 
     try {
         dispatch({ type: UPDATE_PROFILE_REQUEST });    
-        const api = "http://localhost:5000";
+        const api = "https://shopzone-mern.herokuapp.com";
         const config = { method: "PUT", headers: { "Content-Type": "multipart/form-data" }, withCredentials: 'true', credentials: 'include' };
         const { data } = await axios.put(api + "/api/v1/me/update", userData, config);
         dispatch({ 
@@ -154,7 +154,7 @@ export const updatePassword = (passwords) => async (dispatch) => {
     
     try {
         dispatch({ type: UPDATE_PASSWORD_REQUEST });
-        const api = "http://localhost:5000";
+        const api = "https://shopzone-mern.herokuapp.com";
         const config = { method: "PUT", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
         
         const { data } = await axios.put(
@@ -180,7 +180,7 @@ export const forgotPassword = (email) => async (dispatch) => {
     try {
         dispatch({ type: FORGOT_PASSWORD_REQUEST });
         const config = { method: "POST", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
-        const api = "http://localhost:5000";
+        const api = "https://shopzone-mern.herokuapp.com";
         const { data } = await axios.post(api + "/api/v1/password/forgot", email, config);
         dispatch({ 
             type: FORGOT_PASSWORD_SUCCESS, 
@@ -200,7 +200,7 @@ export const resetPassword = (token, passwords) => async (dispatch) => {
     try {
         dispatch({ type: RESET_PASSWORD_REQUEST });
         const config = { method: "PUT", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
-        const api = "http://localhost:5000";
+        const api = "https://shopzone-mern.herokuapp.com";
         const { data } = await axios.put(
             api + `/api/v1/password/reset/${token}`,
             passwords,
@@ -224,7 +224,7 @@ export const getAllUsers = () => async (dispatch) => {
     try {
         dispatch({ type: ALL_USERS_REQUEST });
         const config = { method: "GET", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
-        const api = "http://localhost:5000";
+        const api = "https://shopzone-mern.herokuapp.com";
         const { data } = await axios.get(api + "/api/v1/admin/users", config);
         dispatch({ 
             type: ALL_USERS_SUCCESS, 
@@ -245,7 +245,7 @@ export const getUserDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: USER_DETAILS_REQUEST });
         const config = { method: "GET", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
-        const api = "http://localhost:5000";
+        const api = "https://shopzone-mern.herokuapp.com";
         const { data } = await axios.get(api + `/api/v1/admin/user/${id}`, config);
         dispatch({ 
             type: USER_DETAILS_SUCCESS, 
@@ -266,7 +266,7 @@ export const updateUser = (id, userData) => async (dispatch) => {
     try {
         dispatch({ type: UPDATE_USER_REQUEST });
         const config = { method: "PUT", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
-        const api = "http://localhost:5000";
+        const api = "https://shopzone-mern.herokuapp.com";
         const { data } = await axios.put(api + `/api/v1/admin/user/${id}`,
             userData,
             config
@@ -290,7 +290,7 @@ export const deleteUser = (id) => async (dispatch) => {
     try {
         dispatch({ type: DELETE_USER_REQUEST });
         const config = { method: "DELETE", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
-        const api = "http://localhost:5000";
+        const api = "https://shopzone-mern.herokuapp.com";
         const { data } = await axios.delete(api + `/api/v1/admin/user/${id}`, config);
         dispatch({ 
             type: DELETE_USER_SUCCESS, 
