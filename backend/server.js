@@ -27,6 +27,11 @@ process.on("uncaughtException", err =>{
 
 connectDatabase();
 
+
+app.get("/", (req, res) => {
+    res.json("server started");
+})
+
 const server = app.listen(process.env.PORT, (req, res) => {
     console.log(`server started on port ${process.env.PORT}`);
 })
