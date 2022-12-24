@@ -4,7 +4,7 @@ import {
     SAVE_SHIPPING_INFO,
 } from "../constants/cartConstants";
 import axios from "axios";
-const api = "https://shopzone.vercel.app";
+const api = "https://shopzone-mern.vercel.app";
 
 // Add to Cart
 export const addItemsToCart = (id, quantity) => async (dispatch, getState) => {

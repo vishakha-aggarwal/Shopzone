@@ -21,7 +21,7 @@ import {
 } from "../constants/orderConstants";
 
 import axios from "axios";
-const api = "https://shopzone.vercel.app";
+const api = "https://shopzone-mern.vercel.app";
 
 // Create Order
 export const createOrder = (order) => async (dispatch) => {

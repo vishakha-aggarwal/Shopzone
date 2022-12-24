@@ -39,7 +39,7 @@ import {
 
     CLEAR_ERRORS,
 } from "../constants/productConstants";
-const api = "https://shopzone.vercel.app";
+const api = "https://shopzone-mern.vercel.app";
 
 // Get All Products
 export const getProduct = (keyword = "", currentPage = 1, price = [0, 25000], category, ratings=0) => async (dispatch) => {

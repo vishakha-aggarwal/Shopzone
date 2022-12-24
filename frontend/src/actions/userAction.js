@@ -37,7 +37,7 @@ import {
     CLEAR_ERRORS,
 } from "../constants/userConstants";
 import axios from "axios";
-const api = "https://shopzone.vercel.app";
+const api = "https://shopzone-mern.vercel.app";
 
 // Login user
 export const login = (email, password) => async (dispatch) => {
