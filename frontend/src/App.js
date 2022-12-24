@@ -55,7 +55,7 @@ function App() {
   }; 
 
   async function getStripeApiKey() {
-    const api = "https://shopzone-mern.herokuapp.com";
+    const api = "https://shopzone.vercel.app";
     const config = { method: "GET", headers: { "Content-Type": "application/json" }, withCredentials: 'true', credentials: 'include' };
     const {data} = await axios.get(api + "/api/v1/stripeapikey", config);
     setStripeApiKey(data.stripeApiKey);
